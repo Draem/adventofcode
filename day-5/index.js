@@ -13,9 +13,7 @@ const passToBin = (pass) => parseInt(pass.replace(/B|R/g, 1).replace(/F|L/g, 0),
 { 
     const sortedPasses = passes.map(
         passToBin
-    ).sort(
-        (a, b) => a > b ? 1 : -1
-    );
+    ).sort();
 
     console.log('part 2:', sortedPasses.filter(
         (x, i) => x ^ (sortedPasses[i + 1] - 1)
